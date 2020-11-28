@@ -168,10 +168,12 @@ def caption(title, x, y):
 def chart_co2_temp(name=None, freq='24H'):
     data = prepare_data(name, freq)
 
-    co2_min = min(500, data['co2'].min() - 50)
-    co2_max = min(max(2000, data['co2'].max() + 50), _CO2_MAX_VALUE)
-    t_min = min(15, data['temp'].min())
-    t_max = max(27, data['temp'].max())
+    # co2_min = min(500, data['co2'].min() - 50)
+    # co2_max = min(max(2000, data['co2'].max() + 50), _CO2_MAX_VALUE)
+    co2_min = data['co2'].min() - 50
+    co2_max = data['co2'].max() + 50
+    t_min = data['temp'].min()
+    t_max = data['temp'].max()
 
     rect_green = rect(co2_min, _RANGE_MID[0], _COLORS['g'])
     rect_yellow = rect(_RANGE_MID[0], _RANGE_MID[1], _COLORS['y'])

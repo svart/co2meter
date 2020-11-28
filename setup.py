@@ -1,6 +1,6 @@
 from setuptools import setup
 
-GITHUB_URL = 'http://github.com/vfilimonov/co2meter'
+GITHUB_URL = 'http://github.com/svart/co2meter'
 
 exec(open('co2meter/_version.py').read())
 
